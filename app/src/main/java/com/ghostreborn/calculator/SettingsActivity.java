@@ -2,6 +2,7 @@ package com.ghostreborn.calculator;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
+import androidx.appcompat.widget.SwitchCompat;
 
 import android.os.Bundle;
 import android.widget.CompoundButton;
@@ -14,7 +15,8 @@ public class SettingsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
 
-        Switch switchButton = findViewById(R.id.dark_switch);
+        // Simple Button Mechanism
+        SwitchCompat switchButton = findViewById(R.id.dark_switch);
         switchButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
